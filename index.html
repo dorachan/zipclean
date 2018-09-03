@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="robots" content="noindex">
+  <title>ZIPファイルクリーニング</title>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="jszip.min.js"></script>
+  <script src="FileSaver.js"></script>
+  <style>
+    .show {
+      display: block;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .note {
+      margin-top: 0;
+      margin-bottom: 0em
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Zipファイルクリーナー</h1>
+  <p class="note">Zipファイル内から不要なファイルを除去します。</p>
+  <p class="note">ピリオドで始まるファイル名、スペースが入っているファイル名などを除去します。</p>
+  <p class="note">日本語ファイル名は扱えません。</p>
+  <p class="note">IEでは大きいファイルが扱えません。エラーになる場合は Chrome をお使いください。</p>
+
+  <div id="upload">
+    <h3>Zipファイルを選択してください</h3>
+    <input type="file" id="file" name="file" /><br />
+  </div>
+
+  <div id="download">
+    <h3>クリーニング済みのZipファイルをダウンロードします</h3>
+    <button id="blob" class="btn btn-primary">クリーニング済みZipファイルダウンロード</button>
+  </div>
+
+  <div id="result_block" class="hidden">
+    <h3>ファイルの内容 :</h3>
+    <div id="result"></div>
+  </div>
+
+  <script src="zipclean.js"></script>
+</body>
+
+</html>
