@@ -26,20 +26,20 @@
 </head>
 
 <body>
-  <h1>Zipファイルクリーナー</h1>
-  <p class="note">Zipファイル内から不要なファイルを除去します。</p>
-  <p class="note">ピリオドで始まるファイル名、スペースが入っているファイル名などを除去します。</p>
-  <p class="note">日本語ファイル名は扱えません。</p>
+  <h1>ZIPファイルクリーナー</h1>
+  <p class="note">ZIPファイル内から不要なファイル(隠しファイル)を除去します。</p>
+  <p class="note">ピリオドで始まるファイル名、スペースが入っているファイル名、日本語ファイル名などを除去します。</p>
+  <p class="note">除去対象は<span style="color:red;">赤文字</span>で表示されますので、必用なファイルが除外されていないかご確認ください。</p>
   <p class="note">IEでは大きいファイルが扱えません。エラーになる場合は Chrome をお使いください。</p>
 
   <div id="upload">
-    <h3>Zipファイルを選択してください</h3>
+    <h3>ZIPファイルを選択してください</h3>
     <input type="file" id="file" name="file" /><br />
   </div>
 
   <div id="download">
-    <h3>クリーニング済みのZipファイルをダウンロードします</h3>
-    <button id="blob" class="btn btn-primary">クリーニング済みZipファイルダウンロード</button>
+    <h3>クリーニング済みのZIPファイルをダウンロードします</h3>
+    <button id="blob" class="btn btn-primary">クリーニング済みZIPファイルダウンロード</button>
   </div>
 
   <div id="result_block" class="hidden">

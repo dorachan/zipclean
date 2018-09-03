@@ -1,4 +1,4 @@
-var pattern = /(^\.|\/\.|\.ico$| )/;
+var ignpattern = /([^A-Za-z0-9\/_\.\-]|\/\.|^\.|__MACOSX|\.ico$|\.db$)/;
 
 var $result = $("#result");
 var cleanzip = new JSZip();
@@ -40,7 +40,7 @@ $("#file").on("change", function(evt) {
 
           cleanzip = new JSZip();
           zip.forEach(function(relativePath, zipEntry) {
-            if (zipEntry.name.match(pattern)) {
+            if (zipEntry.name.match(ignpattern)) {
               // 2) print entries
               $fileContent.append(
                 $("<li>", {
